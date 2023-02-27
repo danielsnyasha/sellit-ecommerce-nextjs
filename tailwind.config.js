@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   mode: "jit",
   purge: [
@@ -9,8 +11,8 @@ module.exports = {
     extend: {
       colors: {
         amazon_blue: {
-          light: "#232F3E",
-          DEFAULT: "#131921",
+          light: "#a6c0f9",
+          DEFAULT: "#1d4496",
         },
       },
     },
