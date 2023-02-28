@@ -24,21 +24,24 @@ function Header() {
 
         {/* Right */}
         <div className='text-red-50 items-center text-xs font-bold flex space-x-6 mx-6 whitespace-nowrap'>
-            <div className='cursor-pointer link'>
+            <div className=' link'>
                 <p> Hello Nyasha Daniel </p>
-                <p>Account & Lists</p>
+                <p className='font-extrabold md:text-sm'>Account & Lists</p>
 
             </div>
 
-            <div className='cursor-pointer link'>
+            <div className='link'>
                 <p>Returns</p>
-                <p>& Orders</p>
+                <p className='font-extrabold md:text-sm'>& Orders</p>
 
             </div>
 
-            <div className='cursor-pointer link'>
+            <div className='relative link flex items-center'>
+                <span className='absolute top-0 right-0 md:right-10 h-4 w-4 bg-red-600 text-center rounded-full text-red-50 font-bold'>4
+
+                </span>
                 <ShoppingCartIcon className='h-10'/>
-                <p>Basket</p>
+                <p className='hidden sm:inline font-extrabold mt-2 md:text-sm'>Basket</p>
             </div>
 
 
@@ -52,8 +55,21 @@ function Header() {
 
         {/* Bottom Nav */}
 
-        <div>
+        <div className='flex items-center space-x-3 p-2 bg-gray-800 text-white text-sm'>
+            <p className='link flex items-center' >
+                <MenuIcon className='h-6 mr-1'/>
+                All
+            </p>
+            <p className='link'>Prime Video</p>
+            <p className='link'>Business</p>
+            <p className='link'>Today&apos;s Deals</p>
 
+            <p className='link hidden lg:inline-flex'>Sports Wear</p>
+            <p className='link hidden lg:inline-flex'>Food & Grocery</p>
+            <p className='link hidden lg:inline-flex'>Prime</p>
+            <p className='link hidden lg:inline-flex'>Buy Again</p>
+            <p className='link hidden lg:inline-flex'>Shopper Toolkit</p>
+            <p className='link hidden lg:inline-flex'>Health & Personal Care</p>
 
 
         </div>
