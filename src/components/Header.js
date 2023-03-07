@@ -1,9 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
 import {MenuIcon, SearchIcon, ShoppingCartIcon} from "@heroicons/react/outline"
-
+import { signIn, signOut, useSession } from 'next-auth/react';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function Header() {
+    const { data: session } = useSession();
+
+  const router = useRouter();
+  const { redirect } = router.query;
   return (
     <header>
 
@@ -24,13 +31,14 @@ function Header() {
 
         {/* Right */}
         <div className='text-red-50 items-center text-xs font-bold flex space-x-6 mx-6 whitespace-nowrap'>
-            <div className=' link'>
-                <p> Hello Nyasha Daniel </p>
+            <Link href='/login'><div className=' link cursor-pointer'>
+                <p className='hover:underline'> Hello Nyasha Daniel </p>
                 <p className='font-extrabold md:text-sm'>Account & Lists</p>
 
             </div>
+            </Link>
 
-            <div className='link'>
+            <div className='link cursor-pointer'>
                 <p>Returns</p>
                 <p className='font-extrabold md:text-sm'>& Orders</p>
 
