@@ -6,6 +6,8 @@ import { signIn, useSession } from 'next-auth/react';
 import { getError } from '../utils/error';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
+import Header2 from './header2';
+
 
 export default function LoginScreen() {
   const { data: session } = useSession();
@@ -40,8 +42,11 @@ export default function LoginScreen() {
     }
   };
   return (
-    
+    <div>
+      <Header2/>
+     
       <form
+
         className="mx-auto max-w-screen"
         onSubmit={handleSubmit(submitHandler)}
       >
@@ -78,7 +83,7 @@ export default function LoginScreen() {
             })}
             className="w-full"
             id="password"
-            autofocus
+            autoFocus
           ></input>
           {errors.password && <div className="text-500-red font-bold"></div>}
         </div>
@@ -90,6 +95,7 @@ export default function LoginScreen() {
           <Link href="register">Register</Link>
         </div>
       </form>
+      </div>
     
   );
 }

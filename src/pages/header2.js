@@ -31,27 +31,16 @@ function Header() {
 
         {/* Right */}
         <div className='text-red-50 items-center text-xs font-bold flex space-x-6 mx-6 whitespace-nowrap'>
-            <Link href='/login'><div className=' link cursor-pointer'>
-                <p className='hover:underline'> Hello Nyasha Daniel </p>
-                <p className='font-extrabold md:text-sm'>Account & Lists</p>
+            <Link href='/'><div className=' link cursor-pointer'>
+                <p className='hover:underline'> Home </p>
+                <p className='font-extrabold md:text-sm'>Nav to home</p>
 
             </div>
             </Link>
 
-            <div className='link cursor-pointer'>
-                <p>Returns</p>
-                <p className='font-extrabold md:text-sm'>& Orders</p>
+            
 
-            </div>
-
-            <div className='relative link flex items-center'>
-                <span className='absolute top-0 right-0 md:right-10 h-4 w-4 bg-red-600 text-center rounded-full text-red-50 font-bold'>4
-
-                </span>
-                <ShoppingCartIcon className='h-10'/>
-                <p className='hidden sm:inline font-extrabold mt-2 md:text-sm'>Basket</p>
-            </div>
-
+           
 
         </div>
 

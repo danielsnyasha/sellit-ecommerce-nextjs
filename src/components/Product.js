@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import React, { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
@@ -13,13 +14,13 @@ function Product({id, title, price, description, category, image}) {
      const [hasPrime] = useState(Math.random() <0.5)
   return (
     <div className='relative flex-col m-5 bg-white z-30 p-10 shadow-lg hover:shadow-blue-200'>
-        <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{ category}</p>
+        <h2 className='absolute top-2 right-2 text-xs italic text-gray-400'>{ category}</h2>
 
         <Image src={image} height={200} width={200} alt='nyasha' style={{objectFit:"cover"}}/>
         <h4 className='my-3'>{title}</h4>
         <div className='flex'>
             {Array(rating).fill().map((_, i)=>( 
-                <StarIcon className='h-5 text-yellow-500'/>
+                <StarIcon className='h-5 text-yellow-500' key={i}/>
 
             ))}
         
